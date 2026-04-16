@@ -1,10 +1,9 @@
 #include<iostream>
 #include <string>
-#include <cctype>  
+
 using namespace std;
 
 string cifradoCaesar(string fraseOriginal,int distancia);
-string fraseNormalizada(string fraseOriginal);
 int main(){
     string fraseAEncriptar;
     int distancia;
@@ -20,20 +19,8 @@ int main(){
     return 0;
 }
 
-string fraseNormalizada(string fraseOriginal){
-
-    string fraseFin;
-
-    for (int i = 0; i < fraseOriginal.length(); i++)
-    {
-        fraseFin+=tolower(fraseOriginal[i]);
-    }
-    return fraseFin;
-}
 
 string cifradoCaesar(string fraseOriginal,int distancia){
-
-    fraseOriginal=fraseNormalizada(fraseOriginal);
     string fraseEncriptada;
     string abecedario="abcdefghijklmnopqrstuvwxyz";
     for (int i = 0; i < fraseOriginal.length(); i++)
